@@ -1,0 +1,8 @@
+﻿@model Tuple<string, string> 
+
+<div class="form-group row mt-3">
+    <label for="@Model.Item1" class="col-sm-4 col-form-label">@Model.Item2:</label>
+    <div class="col-sm-2">
+        <input type="text" id="@Model.Item1" name="@Model.Item1" class="form-control bg-dark text-light" value="" />
+    </div>
+</div>

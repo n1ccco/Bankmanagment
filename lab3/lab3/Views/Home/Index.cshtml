@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model BankInputModel
+
+@using (Html.BeginForm("Predict", "Bank", FormMethod.Post))
+{
+    @Html.Partial("_FormGroup", new Tuple<string, string> ("Age", "Age"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Job", "Job"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Marital", "Marital status"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Eduction", "Education"))
+
+    @Html.Partial("_FormGroupCheckbox", new Tuple<string, string>("Default", "Has credit in default?"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Balance", "Average yearly balance(euro)"))
+
+    @Html.Partial("_FormGroupCheckbox", new Tuple<string, string>("Housing", "Has housing loan?"))
+
+    @Html.Partial("_FormGroupCheckbox", new Tuple<string, string>("Loan", "Has personal loan?"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Contact", "Contact communication type (cellular, telephone)"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Day", "Last contact day of the week"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Month", "Last contact month of year"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Duration", "Last contact duration, in seconds"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Campaign", "Number of contacts performed during this campaign and for this client"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Pdays", "Number of days that passed by after the client was last contacted from a previous campaign"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Previous", "Number of contacts performed before this campaign and for this client"))
+
+    @Html.Partial("_FormGroup", new Tuple<string, string>("Poutcome", "Outcome of the previous marketing campaign"))
+
+    <div class="form-group row mt-3">
+        <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </div>
+    </div>
+}

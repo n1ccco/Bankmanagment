@@ -1,0 +1,11 @@
+﻿@model Tuple<string, string>
+
+<div class="form-group row mt-3">
+    <label for="@Model.Item1" class="col-sm-4 col-form-label">@Model.Item1:</label>
+    <div class="col-sm-2">
+        <div class="form-check">
+            <input type="checkbox" id="@Model.Item1" name="@Model.Item1" class="form-check-input" value="" />
+            <label class="form-check-label" for="@Model.Item1">@Model.Item2</label>
+        </div>
+    </div>
+</div>
